@@ -4,7 +4,7 @@ using Molecule.Domain;
 
 namespace Molecule.Application.Flours.Queries.GetFlourDetails
 {
-    internal class FlourDetailsVm : IMapWith<Flour>
+    public class FlourDetailsVm : IMapWith<Flour>
     {
         public Guid Id { get; set; }
         public string Name { get; set; }

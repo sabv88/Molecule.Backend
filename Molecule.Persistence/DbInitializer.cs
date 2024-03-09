@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Molecule.Persistence
 {
-    internal class DbInitializer
+    public class DbInitializer
     {
         public static void Initialize(MoleculeDbContext context)
         { 
-            context.Database.EnsureCreated();
+            //context.Database.EnsureCreated();
         }
     }
 }

@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 
 namespace Molecule.Persistence
 {
-    internal class MoleculeDbContext : DbContext, IMoleculeDbContext
+    public class MoleculeDbContext : DbContext, IMoleculeDbContext
     {
         public DbSet<Flour> Flours { get; set; }
 
-        public MoleculeDbContext(DbContextOptions<MoleculeDbContext> dbContextOptions) : base(dbContextOptions) 
-        { 
-        
+        public MoleculeDbContext(DbContextOptions<MoleculeDbContext> dbContextOptions) : base(dbContextOptions)
+        {
+
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

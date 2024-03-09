@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Molecule.Application.Common.Mappings
 {
-    internal class AssemblyMappingProfile : Profile
+    public class AssemblyMappingProfile : Profile
     {
         public AssemblyMappingProfile(Assembly assembly) => ApplyMappingsFromAssembly(assembly);
 
