@@ -4,6 +4,7 @@ using Molecule.Persistence;
 using System.Reflection;
 using Molecule.Application;
 using System.Text.Json.Serialization;
+using Notes.WebApi.Middleware;
 
 namespace WebApi
 {
@@ -33,10 +34,15 @@ namespace WebApi
                 });
             });
             var app = builder.Build();
+            app.UseCustomExceptionHandler();
+            app.UseRouting();
             app.UseHttpsRedirection();
             app.UseCors("AllowAll");
-            app.MapGet("/", () => "Hello World!");
-
+            app.MapControllers();
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
             app.Run();
         }
     }

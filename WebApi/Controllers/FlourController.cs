@@ -10,11 +10,11 @@ using Molecule.Backend.Models;
 namespace Notes.WebApi.Controllers
 {
     [Route("api/[controller]")]
-    public class NoteController : BaseController
+    public class FlourController : BaseController
     {
         private readonly IMapper _mapper;
 
-        public NoteController(IMapper mapper) => _mapper = mapper;
+        public FlourController(IMapper mapper) => _mapper = mapper;
 
         [HttpGet]
         public async Task<ActionResult<FlourListVm>> GetAll()

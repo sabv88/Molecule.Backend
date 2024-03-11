@@ -1,4 +1,7 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using FluentValidation;
+using MediatR;
+using Microsoft.Extensions.DependencyInjection;
+using Molecule.Application.Common.Behaviors;
 using System.Reflection;
 
 namespace Molecule.Application
@@ -9,6 +12,10 @@ namespace Molecule.Application
             this IServiceCollection services)
         {
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
+            services
+               .AddValidatorsFromAssemblies(new[] { Assembly.GetExecutingAssembly() });
+            services.AddTransient(typeof(IPipelineBehavior<,>),
+                typeof(ValidationBehavior<,>));
             return services;
         }
     }
