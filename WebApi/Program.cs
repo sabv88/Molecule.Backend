@@ -5,6 +5,7 @@ using System.Reflection;
 using Molecule.Application;
 using System.Text.Json.Serialization;
 using Notes.WebApi.Middleware;
+using System.Xml.Linq;
 
 namespace WebApi
 {
@@ -18,10 +19,12 @@ namespace WebApi
                 config.AddProfile(new AssemblyMappingProfile(Assembly.GetExecutingAssembly()));
                 config.AddProfile(new AssemblyMappingProfile(typeof(IMoleculeDbContext).Assembly));
             });
+
             builder.Services.AddControllers().AddJsonOptions(options =>
             {
                 options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
             });
+
             builder.Services.AddApplication();
             builder.Services.AddPersistence(builder.Configuration);
             builder.Services.AddCors(options =>
@@ -33,7 +36,22 @@ namespace WebApi
                     policy.AllowAnyOrigin();
                 });
             });
+
+            builder.Services.AddSwaggerGen(config =>
+            {
+                //var a = Assembly.GetExecutingAssembly().GetName().Name;
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                //new XDocument().Save(xmlPath)
+                config.IncludeXmlComments(xmlPath, true);
+            });
             var app = builder.Build();
+            app.UseSwagger();
+            app.UseSwaggerUI(config =>
+            {
+                config.RoutePrefix = string.Empty;
+                config.SwaggerEndpoint("swagger/v1/swagger.json", "Molecule API");
+            });
             app.UseCustomExceptionHandler();
             app.UseRouting();
             app.UseHttpsRedirection();

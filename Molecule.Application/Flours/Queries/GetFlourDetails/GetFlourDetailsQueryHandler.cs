@@ -8,7 +8,7 @@ using Molecule.Domain;
 
 namespace Molecule.Application.Flours.Queries.GetFlourDetails
 {
-    internal class GetFlourDetailsQueryHandler : IRequestHandler<GetFlourDetailsQuery, FlourDetailsVm>
+    public class GetFlourDetailsQueryHandler : IRequestHandler<GetFlourDetailsQuery, FlourDetailsVm>
     {
         private readonly IMoleculeDbContext _dbContext;
         private readonly IMapper _mapper;
