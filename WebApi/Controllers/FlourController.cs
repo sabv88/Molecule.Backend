@@ -67,7 +67,7 @@ namespace Notes.WebApi.Controllers
         ///     Name: "flour name",
         /// }
         /// </remarks>
-        /// <param name="createNoteDto">CreateFlourDto object</param>
+        /// <param name="createFlourDto">CreateFlourDto object</param>
         /// <returns>Returns id (guid)</returns>
         /// <response code="201">Success</response>
         /// <response code="401">If the user is unauthorized</response>
@@ -93,7 +93,7 @@ namespace Notes.WebApi.Controllers
         ///     name: "updated flour name"
         /// }
         /// </remarks>
-        /// <param name="updateNoteDto">UpdateFlourDto object</param>
+        /// <param name="updateFlourDto">UpdateFlourDto object</param>
         /// <returns>Returns NoContent</returns>
         /// <response code="204">Success</response>
         /// <response code="401">If the user is unauthorized</response>
@@ -101,9 +101,9 @@ namespace Notes.WebApi.Controllers
         [HttpPut]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-        public async Task<IActionResult> Update([FromBody] UpdateFlourDto updateNoteDto)
+        public async Task<IActionResult> Update([FromBody] UpdateFlourDto updateFlourDto)
         {
-            var command = _mapper.Map<UpdateFlourCommand>(updateNoteDto);
+            var command = _mapper.Map<UpdateFlourCommand>(updateFlourDto);
             await Mediator.Send(command);
             return NoContent();
         }

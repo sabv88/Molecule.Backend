@@ -1,0 +1,110 @@
+2024-03-14 22:37:25.384 +03:00 [INF] Now listening on: https://localhost:7297
+2024-03-14 22:37:25.434 +03:00 [INF] Now listening on: http://localhost:5051
+2024-03-14 22:37:25.439 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-03-14 22:37:25.440 +03:00 [INF] Hosting environment: Development
+2024-03-14 22:37:25.440 +03:00 [INF] Content root path: D:\Molecule.Backend\WebApi\
+2024-03-14 22:37:26.858 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7297/index.html - -
+2024-03-14 22:37:27.364 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7297/index.html - - - 200 - text/html;charset=utf-8 508.2672ms
+2024-03-14 22:37:27.804 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7297/_vs/browserLink - -
+2024-03-14 22:37:27.804 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7297/_framework/aspnetcore-browser-refresh.js - -
+2024-03-14 22:37:27.818 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7297/_framework/aspnetcore-browser-refresh.js - - - 200 11982 application/javascript;+charset=utf-8 10.3174ms
+2024-03-14 22:37:27.829 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7297/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 25.3511ms
+2024-03-14 22:37:27.924 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7297/swagger/v1/swagger.json - -
+2024-03-14 22:37:28.116 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7297/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 191.6017ms
+2024-03-14 22:38:09.769 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7297/api/Flour - -
+2024-03-14 22:38:09.804 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.FlourController.GetAll (WebApi)'
+2024-03-14 22:38:09.841 +03:00 [INF] Route matched with {action = "GetAll", controller = "Flour"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Molecule.Application.Flours.Queries.GetFlourList.FlourListVm]] GetAll() on controller Notes.WebApi.Controllers.FlourController (WebApi).
+2024-03-14 22:38:09.995 +03:00 [INF] Notes Request: GetFlourListQuery "00000000-0000-0000-0000-000000000000" {"$type":"GetFlourListQuery"}
+2024-03-14 22:38:11.564 +03:00 [INF] Entity Framework Core 6.0.27 initialized 'MoleculeDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.22+7b04a420e2d10ef5ef0db6abe49a6ad53a2f8653' with options: None
+2024-03-14 22:38:12.546 +03:00 [INF] Executed DbCommand (77ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT f."Id", f."Name"
+FROM "Flours" AS f
+2024-03-14 22:38:12.615 +03:00 [INF] Executing OkObjectResult, writing value of type 'Molecule.Application.Flours.Queries.GetFlourList.FlourListVm'.
+2024-03-14 22:38:12.646 +03:00 [INF] Executed action Notes.WebApi.Controllers.FlourController.GetAll (WebApi) in 2799.3128ms
+2024-03-14 22:38:12.647 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.FlourController.GetAll (WebApi)'
+2024-03-14 22:38:12.656 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7297/api/Flour - - - 200 - application/json;+charset=utf-8 2887.5176ms
+2024-03-14 22:38:38.777 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7297/api/Flour - -
+2024-03-14 22:38:38.778 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.FlourController.GetAll (WebApi)'
+2024-03-14 22:38:38.781 +03:00 [INF] Route matched with {action = "GetAll", controller = "Flour"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Molecule.Application.Flours.Queries.GetFlourList.FlourListVm]] GetAll() on controller Notes.WebApi.Controllers.FlourController (WebApi).
+2024-03-14 22:38:38.782 +03:00 [INF] Notes Request: GetFlourListQuery "00000000-0000-0000-0000-000000000000" {"$type":"GetFlourListQuery"}
+2024-03-14 22:38:38.798 +03:00 [INF] Entity Framework Core 6.0.27 initialized 'MoleculeDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.22+7b04a420e2d10ef5ef0db6abe49a6ad53a2f8653' with options: None
+2024-03-14 22:38:38.810 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT f."Id", f."Name"
+FROM "Flours" AS f
+2024-03-14 22:38:38.811 +03:00 [INF] Executing OkObjectResult, writing value of type 'Molecule.Application.Flours.Queries.GetFlourList.FlourListVm'.
+2024-03-14 22:38:38.811 +03:00 [INF] Executed action Notes.WebApi.Controllers.FlourController.GetAll (WebApi) in 29.4966ms
+2024-03-14 22:38:38.811 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.FlourController.GetAll (WebApi)'
+2024-03-14 22:38:38.811 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7297/api/Flour - - - 200 - application/json;+charset=utf-8 34.6158ms
+2024-03-14 22:38:39.578 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7297/api/Flour - -
+2024-03-14 22:38:39.580 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.FlourController.GetAll (WebApi)'
+2024-03-14 22:38:39.580 +03:00 [INF] Route matched with {action = "GetAll", controller = "Flour"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Molecule.Application.Flours.Queries.GetFlourList.FlourListVm]] GetAll() on controller Notes.WebApi.Controllers.FlourController (WebApi).
+2024-03-14 22:38:39.580 +03:00 [INF] Notes Request: GetFlourListQuery "00000000-0000-0000-0000-000000000000" {"$type":"GetFlourListQuery"}
+2024-03-14 22:38:39.627 +03:00 [INF] Entity Framework Core 6.0.27 initialized 'MoleculeDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.22+7b04a420e2d10ef5ef0db6abe49a6ad53a2f8653' with options: None
+2024-03-14 22:38:39.629 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT f."Id", f."Name"
+FROM "Flours" AS f
+2024-03-14 22:38:39.630 +03:00 [INF] Executing OkObjectResult, writing value of type 'Molecule.Application.Flours.Queries.GetFlourList.FlourListVm'.
+2024-03-14 22:38:39.630 +03:00 [INF] Executed action Notes.WebApi.Controllers.FlourController.GetAll (WebApi) in 50.0683ms
+2024-03-14 22:38:39.630 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.FlourController.GetAll (WebApi)'
+2024-03-14 22:38:39.630 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7297/api/Flour - - - 200 - application/json;+charset=utf-8 51.9822ms
+2024-03-14 22:38:40.225 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7297/api/Flour - -
+2024-03-14 22:38:40.226 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.FlourController.GetAll (WebApi)'
+2024-03-14 22:38:40.226 +03:00 [INF] Route matched with {action = "GetAll", controller = "Flour"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Molecule.Application.Flours.Queries.GetFlourList.FlourListVm]] GetAll() on controller Notes.WebApi.Controllers.FlourController (WebApi).
+2024-03-14 22:38:40.226 +03:00 [INF] Notes Request: GetFlourListQuery "00000000-0000-0000-0000-000000000000" {"$type":"GetFlourListQuery"}
+2024-03-14 22:38:40.226 +03:00 [INF] Entity Framework Core 6.0.27 initialized 'MoleculeDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.22+7b04a420e2d10ef5ef0db6abe49a6ad53a2f8653' with options: None
+2024-03-14 22:38:40.228 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT f."Id", f."Name"
+FROM "Flours" AS f
+2024-03-14 22:38:40.229 +03:00 [INF] Executing OkObjectResult, writing value of type 'Molecule.Application.Flours.Queries.GetFlourList.FlourListVm'.
+2024-03-14 22:38:40.229 +03:00 [INF] Executed action Notes.WebApi.Controllers.FlourController.GetAll (WebApi) in 3.3944ms
+2024-03-14 22:38:40.229 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.FlourController.GetAll (WebApi)'
+2024-03-14 22:38:40.229 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7297/api/Flour - - - 200 - application/json;+charset=utf-8 3.9657ms
+2024-03-14 22:39:08.395 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7297/api/Flour - -
+2024-03-14 22:39:08.395 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.FlourController.GetAll (WebApi)'
+2024-03-14 22:39:08.395 +03:00 [INF] Route matched with {action = "GetAll", controller = "Flour"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Molecule.Application.Flours.Queries.GetFlourList.FlourListVm]] GetAll() on controller Notes.WebApi.Controllers.FlourController (WebApi).
+2024-03-14 22:39:08.395 +03:00 [INF] Notes Request: GetFlourListQuery "00000000-0000-0000-0000-000000000000" {"$type":"GetFlourListQuery"}
+2024-03-14 22:39:08.395 +03:00 [INF] Entity Framework Core 6.0.27 initialized 'MoleculeDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.22+7b04a420e2d10ef5ef0db6abe49a6ad53a2f8653' with options: None
+2024-03-14 22:39:08.400 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT f."Id", f."Name"
+FROM "Flours" AS f
+2024-03-14 22:39:08.401 +03:00 [INF] Executing OkObjectResult, writing value of type 'Molecule.Application.Flours.Queries.GetFlourList.FlourListVm'.
+2024-03-14 22:39:08.401 +03:00 [INF] Executed action Notes.WebApi.Controllers.FlourController.GetAll (WebApi) in 5.9199ms
+2024-03-14 22:39:08.401 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.FlourController.GetAll (WebApi)'
+2024-03-14 22:39:08.401 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7297/api/Flour - - - 200 - application/json;+charset=utf-8 6.6353ms
+2024-03-14 22:39:09.211 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7297/api/Flour - -
+2024-03-14 22:39:09.211 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.FlourController.GetAll (WebApi)'
+2024-03-14 22:39:09.211 +03:00 [INF] Route matched with {action = "GetAll", controller = "Flour"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Molecule.Application.Flours.Queries.GetFlourList.FlourListVm]] GetAll() on controller Notes.WebApi.Controllers.FlourController (WebApi).
+2024-03-14 22:39:09.212 +03:00 [INF] Notes Request: GetFlourListQuery "00000000-0000-0000-0000-000000000000" {"$type":"GetFlourListQuery"}
+2024-03-14 22:39:09.212 +03:00 [INF] Entity Framework Core 6.0.27 initialized 'MoleculeDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.22+7b04a420e2d10ef5ef0db6abe49a6ad53a2f8653' with options: None
+2024-03-14 22:39:09.213 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT f."Id", f."Name"
+FROM "Flours" AS f
+2024-03-14 22:39:09.214 +03:00 [INF] Executing OkObjectResult, writing value of type 'Molecule.Application.Flours.Queries.GetFlourList.FlourListVm'.
+2024-03-14 22:39:09.214 +03:00 [INF] Executed action Notes.WebApi.Controllers.FlourController.GetAll (WebApi) in 2.6645ms
+2024-03-14 22:39:09.214 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.FlourController.GetAll (WebApi)'
+2024-03-14 22:39:09.214 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7297/api/Flour - - - 200 - application/json;+charset=utf-8 3.1912ms
+2024-03-14 22:39:27.175 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7297/api/Flour application/json 22
+2024-03-14 22:39:27.183 +03:00 [INF] CORS policy execution successful.
+2024-03-14 22:39:27.184 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.FlourController.Create (WebApi)'
+2024-03-14 22:39:27.200 +03:00 [INF] Route matched with {action = "Create", controller = "Flour"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid]] Create(Molecule.Backend.Models.CreateFlourDto) on controller Notes.WebApi.Controllers.FlourController (WebApi).
+2024-03-14 22:39:27.308 +03:00 [INF] Notes Request: CreateFlourCommand "00000000-0000-0000-0000-000000000000" {"Name":"string","$type":"CreateFlourCommand"}
+2024-03-14 22:39:27.313 +03:00 [INF] Entity Framework Core 6.0.27 initialized 'MoleculeDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.22+7b04a420e2d10ef5ef0db6abe49a6ad53a2f8653' with options: None
+2024-03-14 22:39:27.520 +03:00 [INF] Executed DbCommand (23ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Flours" ("Id", "Name")
+VALUES (@p0, @p1);
+2024-03-14 22:39:27.567 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Guid'.
+2024-03-14 22:39:27.574 +03:00 [INF] Executed action Notes.WebApi.Controllers.FlourController.Create (WebApi) in 373.4987ms
+2024-03-14 22:39:27.574 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.FlourController.Create (WebApi)'
+2024-03-14 22:39:27.574 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7297/api/Flour application/json 22 - 200 - application/json;+charset=utf-8 399.5659ms
+2024-03-14 22:39:40.725 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7297/api/Flour - -
+2024-03-14 22:39:40.725 +03:00 [INF] Executing endpoint 'Notes.WebApi.Controllers.FlourController.GetAll (WebApi)'
+2024-03-14 22:39:40.725 +03:00 [INF] Route matched with {action = "GetAll", controller = "Flour"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Molecule.Application.Flours.Queries.GetFlourList.FlourListVm]] GetAll() on controller Notes.WebApi.Controllers.FlourController (WebApi).
+2024-03-14 22:39:40.725 +03:00 [INF] Notes Request: GetFlourListQuery "00000000-0000-0000-0000-000000000000" {"$type":"GetFlourListQuery"}
+2024-03-14 22:39:40.726 +03:00 [INF] Entity Framework Core 6.0.27 initialized 'MoleculeDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.22+7b04a420e2d10ef5ef0db6abe49a6ad53a2f8653' with options: None
+2024-03-14 22:39:40.727 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT f."Id", f."Name"
+FROM "Flours" AS f
+2024-03-14 22:39:40.727 +03:00 [INF] Executing OkObjectResult, writing value of type 'Molecule.Application.Flours.Queries.GetFlourList.FlourListVm'.
+2024-03-14 22:39:40.728 +03:00 [INF] Executed action Notes.WebApi.Controllers.FlourController.GetAll (WebApi) in 2.5334ms
+2024-03-14 22:39:40.728 +03:00 [INF] Executed endpoint 'Notes.WebApi.Controllers.FlourController.GetAll (WebApi)'
+2024-03-14 22:39:40.728 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7297/api/Flour - - - 200 - application/json;+charset=utf-8 3.0495ms
