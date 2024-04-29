@@ -1,5 +1,4 @@
 ﻿using MediatR;
-using MediatR.Pipeline;
 using Molecule.Application.Interfaces;
 using Molecule.Domain;
 

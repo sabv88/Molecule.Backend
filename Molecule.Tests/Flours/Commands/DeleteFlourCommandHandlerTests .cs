@@ -8,7 +8,7 @@ namespace Notes.Tests.Notes.Commands
     public class DeleteFlourCommandHandlerTests : TestCommandBase
     {
         [Fact]
-        public async Task DeleteNoteCommandHandler_Success()
+        public async Task DeleteFlourCommandHandler_Success()
         {
             // Arrange
             var handler = new DeleteFlourCommandHandler(Context);
@@ -16,16 +16,16 @@ namespace Notes.Tests.Notes.Commands
             // Act
             await handler.Handle(new DeleteFlourCommand
             {
-                Id = FloursContextFactory.FlourIdForDelete,
+                Id = MoleculeContextFactory.FlourIdForDelete,
             }, CancellationToken.None);
 
             // Assert
             Assert.Null(Context.Flours.SingleOrDefault(flour =>
-                flour.Id == FloursContextFactory.FlourIdForDelete));
+                flour.Id == MoleculeContextFactory.FlourIdForDelete));
         }
 
         [Fact]
-        public async Task DeleteNoteCommandHandler_FailOnWrongId()
+        public async Task DeleteFlourCommandHandler_FailOnWrongId()
         {
             // Arrange
             var handler = new DeleteFlourCommandHandler(Context);

@@ -10,7 +10,6 @@ namespace Molecule.Persistence.EntityTypeConfiguration
         { 
             builder.HasKey(Flour=>Flour.Id);
             builder.HasIndex(Flour => Flour.Id).IsUnique();
-
         }
     }
 }

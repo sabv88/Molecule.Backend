@@ -7,14 +7,14 @@ namespace Notes.Tests.Notes.Commands
     public class CreateFlourCommandHandlerTests : TestCommandBase
     {
         [Fact]
-        public async Task CreateNoteCommandHandler_Success()
+        public async Task CreateFlourCommandHandler_Success()
         {
             // Arrange
             var handler = new CreateFlourCommandHandler(Context);
-            var flourName = "note name";
+            var flourName = "flour name";
 
             // Act
-            var noteId = await handler.Handle(
+            var flourId = await handler.Handle(
                 new CreateFlourCommand
                 {
                     Name = flourName,
@@ -23,8 +23,8 @@ namespace Notes.Tests.Notes.Commands
 
             // Assert
             Assert.NotNull(
-                await Context.Flours.SingleOrDefaultAsync(note =>
-                    note.Id == noteId && note.Name == flourName));
+                await Context.Flours.SingleOrDefaultAsync(flour =>
+                    flour.Id == flourId && flour.Name == flourName));
         }
     }
 }

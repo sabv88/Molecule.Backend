@@ -9,12 +9,12 @@ namespace Notes.Tests.Common
 
         public TestCommandBase()
         {
-            Context = FloursContextFactory.Create();
+            Context = MoleculeContextFactory.Create();
         }
 
         public void Dispose()
         {
-            FloursContextFactory.Destroy(Context);
+            MoleculeContextFactory.Destroy(Context);
         }
     }
 }

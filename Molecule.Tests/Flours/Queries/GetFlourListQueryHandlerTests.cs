@@ -1,6 +1,4 @@
-﻿
-
-using AutoMapper;
+﻿using AutoMapper;
 using Molecule.Application.Flours.Queries.GetFlourList;
 using Molecule.Persistence;
 using Notes.Tests.Common;
@@ -21,7 +19,7 @@ namespace Molecule.Tests.Flours.Queries
         }
 
         [Fact]
-        public async Task GetNoteListQueryHandler_Success()
+        public async Task GetFlourListQueryHandler_Success()
         {
             // Arrange
             var handler = new GetFlourListQueryHandler(Context, Mapper);

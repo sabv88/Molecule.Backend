@@ -1,6 +1,4 @@
-﻿
-
-using AutoMapper;
+﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -20,11 +18,11 @@ namespace Molecule.Application.Flours.Queries.GetFlourList
         public async Task<FlourListVm> Handle(GetFlourListQuery request,
             CancellationToken cancellationToken)
         {
-            var notesQuery = await _dbContext.Flours
+            var flourQuery = await _dbContext.Flours
                 .ProjectTo<FlourLookupDto>(_mapper.ConfigurationProvider)
                 .ToListAsync(cancellationToken);
 
-            return new FlourListVm { Flours = notesQuery };
+            return new FlourListVm { Flours = flourQuery };
         }
     }
 }

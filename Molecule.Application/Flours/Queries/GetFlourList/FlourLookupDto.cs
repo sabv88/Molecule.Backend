@@ -1,5 +1,4 @@
-﻿
-using AutoMapper;
+﻿using AutoMapper;
 using Molecule.Application.Common.Mappings;
 using Molecule.Domain;
 

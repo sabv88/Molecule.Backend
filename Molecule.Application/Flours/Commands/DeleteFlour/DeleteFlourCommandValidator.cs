@@ -1,6 +1,4 @@
-﻿
-
-using FluentValidation;
+﻿using FluentValidation;
 
 namespace Molecule.Application.Flours.Commands.DeleteFlour
 {

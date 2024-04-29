@@ -1,12 +1,4 @@
-﻿using AutoMapper;
-using MediatR;
-using Molecule.Application.Common.Exceptions;
-using Molecule.Application.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MediatR;
 
 namespace Molecule.Application.Flours.Queries.GetFlourDetails
 {

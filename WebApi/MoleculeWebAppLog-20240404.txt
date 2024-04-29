@@ -1,0 +1,116 @@
+2024-04-04 14:00:41.395 +03:00 [INF] User profile is available. Using 'C:\Users\pomoika3000\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-04 14:00:42.247 +03:00 [INF] Now listening on: https://localhost:7297
+2024-04-04 14:00:42.247 +03:00 [INF] Now listening on: http://localhost:5051
+2024-04-04 14:00:42.251 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-04 14:00:42.252 +03:00 [INF] Hosting environment: Development
+2024-04-04 14:00:42.252 +03:00 [INF] Content root path: D:\Molecule.Backend\WebApi\
+2024-04-04 14:00:45.575 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7297/index.html - -
+2024-04-04 14:00:46.440 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7297/index.html - - - 200 - text/html;charset=utf-8 872.1208ms
+2024-04-04 14:00:46.713 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7297/_vs/browserLink - -
+2024-04-04 14:00:46.713 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7297/_framework/aspnetcore-browser-refresh.js - -
+2024-04-04 14:00:46.722 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7297/_framework/aspnetcore-browser-refresh.js - - - 200 11982 application/javascript;+charset=utf-8 8.9556ms
+2024-04-04 14:00:46.894 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7297/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 180.6324ms
+2024-04-04 14:00:46.964 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7297/swagger/v1/swagger.json - -
+2024-04-04 14:00:47.157 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7297/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 193.2498ms
+2024-04-04 14:00:58.104 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7297/api/Bouquet application/json 156
+2024-04-04 14:00:58.131 +03:00 [INF] CORS policy execution successful.
+2024-04-04 14:00:58.776 +03:00 [INF] Executing endpoint 'WebApi.Controllers.BouquetController.Create (WebApi)'
+2024-04-04 14:00:58.812 +03:00 [INF] Route matched with {action = "Create", controller = "Bouquet"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid]] Create(WebApi.Models.Bouquet.CreateBouquetDto) on controller WebApi.Controllers.BouquetController (WebApi).
+2024-04-04 14:00:59.048 +03:00 [INF] Notes Request: CreateBouquetCommand "00000000-0000-0000-0000-000000000000" {"Title":"string","Description":"string","Flours":[{"Id":"3fa85f64-5717-4562-b3fc-2c963f66afa6","Name":"string","$type":"UpdateFlourCommand"}],"$type":"CreateBouquetCommand"}
+2024-04-04 14:01:00.715 +03:00 [INF] Entity Framework Core 6.0.28 initialized 'MoleculeDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.22+7b04a420e2d10ef5ef0db6abe49a6ad53a2f8653' with options: None
+2024-04-04 14:07:15.932 +03:00 [INF] Entity Framework Core 6.0.28 initialized 'MoleculeDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.22+7b04a420e2d10ef5ef0db6abe49a6ad53a2f8653' with options: None
+2024-04-04 14:07:39.097 +03:00 [INF] Entity Framework Core 6.0.28 initialized 'MoleculeDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.22+7b04a420e2d10ef5ef0db6abe49a6ad53a2f8653' with options: None
+2024-04-04 14:07:39.419 +03:00 [INF] Executed DbCommand (63ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-04-04 14:07:39.578 +03:00 [INF] Executed DbCommand (39ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "__EFMigrationsHistory" (
+    "MigrationId" character varying(150) NOT NULL,
+    "ProductVersion" character varying(32) NOT NULL,
+    CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY ("MigrationId")
+);
+2024-04-04 14:07:39.611 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-04-04 14:07:39.615 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-04-04 14:07:39.629 +03:00 [INF] Applying migration '20240404110716_Initial'.
+2024-04-04 14:07:39.713 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Bouquets" (
+    "Id" uuid NOT NULL,
+    "Title" text NOT NULL,
+    "Description" text NOT NULL,
+    CONSTRAINT "PK_Bouquets" PRIMARY KEY ("Id")
+);
+2024-04-04 14:07:39.720 +03:00 [ERR] Failed executing DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Flours" (
+    "Id" uuid NOT NULL,
+    "Name" text NOT NULL,
+    CONSTRAINT "PK_Flours" PRIMARY KEY ("Id")
+);
+2024-04-04 14:08:59.462 +03:00 [INF] Entity Framework Core 6.0.28 initialized 'MoleculeDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.22+7b04a420e2d10ef5ef0db6abe49a6ad53a2f8653' with options: None
+2024-04-04 14:08:59.778 +03:00 [INF] Executed DbCommand (63ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-04-04 14:08:59.814 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-04-04 14:08:59.826 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-04-04 14:08:59.840 +03:00 [INF] Applying migration '20240404110716_Initial'.
+2024-04-04 14:08:59.946 +03:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Bouquets" (
+    "Id" uuid NOT NULL,
+    "Title" text NOT NULL,
+    "Description" text NOT NULL,
+    CONSTRAINT "PK_Bouquets" PRIMARY KEY ("Id")
+);
+2024-04-04 14:08:59.959 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Flours" (
+    "Id" uuid NOT NULL,
+    "Name" text NOT NULL,
+    CONSTRAINT "PK_Flours" PRIMARY KEY ("Id")
+);
+2024-04-04 14:08:59.969 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "BouquetFlour" (
+    "BouquetsId" uuid NOT NULL,
+    "FloursId" uuid NOT NULL,
+    "BouquetId" integer NOT NULL,
+    "FlourId" integer NOT NULL,
+    CONSTRAINT "PK_BouquetFlour" PRIMARY KEY ("BouquetsId", "FloursId"),
+    CONSTRAINT "FK_BouquetFlour_Bouquets_BouquetsId" FOREIGN KEY ("BouquetsId") REFERENCES "Bouquets" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_BouquetFlour_Flours_FloursId" FOREIGN KEY ("FloursId") REFERENCES "Flours" ("Id") ON DELETE CASCADE
+);
+2024-04-04 14:08:59.976 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_BouquetFlour_FloursId" ON "BouquetFlour" ("FloursId");
+2024-04-04 14:08:59.981 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Bouquets_Id" ON "Bouquets" ("Id");
+2024-04-04 14:08:59.987 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Flours_Id" ON "Flours" ("Id");
+2024-04-04 14:08:59.988 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20240404110716_Initial', '6.0.28');

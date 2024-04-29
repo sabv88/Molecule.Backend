@@ -3,7 +3,7 @@ using Molecule.Application.Common.Mappings;
 using Molecule.Application.Flours.Commands.CreateFlour;
 using System.ComponentModel.DataAnnotations;
 
-namespace Molecule.Backend.Models
+namespace WebApi.Models.Flour
 {
     public class CreateFlourDto : IMapWith<CreateFlourCommand>
     {

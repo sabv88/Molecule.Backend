@@ -8,6 +8,7 @@ using Notes.WebApi.Middleware;
 using WebApi.Services;
 using Serilog;
 using Serilog.Events;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace WebApi
 {
@@ -42,6 +43,18 @@ namespace WebApi
                     policy.AllowAnyOrigin();
                 });
             });
+            builder.Services.AddAuthentication(config =>
+            {
+                config.DefaultAuthenticateScheme =
+                    JwtBearerDefaults.AuthenticationScheme;
+                config.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+             .AddJwtBearer("Bearer", options =>
+             {
+                 options.Authority = "https://localhost:44386/";
+                 options.Audience = "MoleculeWebAPI";
+                 options.RequireHttpsMetadata = false;
+             });
 
             builder.Services.AddSwaggerGen(config =>
             {
@@ -62,6 +75,8 @@ namespace WebApi
             app.UseRouting();
             app.UseHttpsRedirection();
             app.UseCors("AllowAll");
+            app.UseAuthentication();
+            app.UseAuthorization();
             app.MapControllers();
             app.UseEndpoints(endpoints =>
             {

@@ -1,0 +1,14 @@
+2024-04-08 18:23:40.235 +03:00 [INF] User profile is available. Using 'C:\Users\pomoika3000\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-08 18:23:42.060 +03:00 [INF] Now listening on: https://localhost:7297
+2024-04-08 18:23:42.062 +03:00 [INF] Now listening on: http://localhost:5051
+2024-04-08 18:23:42.068 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-08 18:23:42.069 +03:00 [INF] Hosting environment: Development
+2024-04-08 18:23:42.069 +03:00 [INF] Content root path: D:\Molecule.Backend\WebApi\
+2024-04-08 18:23:59.776 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7297/index.html - -
+2024-04-08 18:24:02.289 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7297/index.html - - - 200 - text/html;charset=utf-8 2544.9416ms
+2024-04-08 18:24:03.007 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7297/_framework/aspnetcore-browser-refresh.js - -
+2024-04-08 18:24:03.007 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7297/_vs/browserLink - -
+2024-04-08 18:24:03.157 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7297/_framework/aspnetcore-browser-refresh.js - - - 200 11982 application/javascript;+charset=utf-8 149.3414ms
+2024-04-08 18:24:05.274 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7297/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 2266.7261ms
+2024-04-08 18:24:05.376 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7297/swagger/v1/swagger.json - -
+2024-04-08 18:24:05.749 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7297/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 372.7942ms

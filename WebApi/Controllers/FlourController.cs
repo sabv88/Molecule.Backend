@@ -5,7 +5,7 @@ using Molecule.Application.Flours.Commands.DeleteFlour;
 using Molecule.Application.Flours.Commands.UpdateFlour;
 using Molecule.Application.Flours.Queries.GetFlourDetails;
 using Molecule.Application.Flours.Queries.GetFlourList;
-using Molecule.Backend.Models;
+using WebApi.Models.Flour;
 
 namespace Notes.WebApi.Controllers
 {

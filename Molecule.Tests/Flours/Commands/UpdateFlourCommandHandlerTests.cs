@@ -10,7 +10,7 @@ namespace Molecule.Tests.Flours.Commands
     public class UpdateFlourCommandHandlerTests : TestCommandBase
     {
         [Fact]
-        public async Task UpdateNoteCommandHandler_Success()
+        public async Task UpdateFlourCommandHandler_Success()
         {
             // Arrange
             var handler = new UpdateFlourCommandHandler(Context);
@@ -19,18 +19,18 @@ namespace Molecule.Tests.Flours.Commands
             // Act
             await handler.Handle(new UpdateFlourCommand
             {
-                Id = FloursContextFactory.FlourIdForUpdate,
+                Id = MoleculeContextFactory.FlourIdForUpdate,
                 Name = updatedName
             }, CancellationToken.None);
 
             // Assert
-            Assert.NotNull(await Context.Flours.SingleOrDefaultAsync(note =>
-                note.Id == FloursContextFactory.FlourIdForUpdate &&
-                note.Name == updatedName));
+            Assert.NotNull(await Context.Flours.SingleOrDefaultAsync(flour =>
+                flour.Id == MoleculeContextFactory.FlourIdForUpdate &&
+                flour.Name == updatedName));
         }
 
         [Fact]
-        public async Task UpdateNoteCommandHandler_FailOnWrongId()
+        public async Task UpdateFlourCommandHandler_FailOnWrongId()
         {
             // Arrange
             var handler = new UpdateFlourCommandHandler(Context);

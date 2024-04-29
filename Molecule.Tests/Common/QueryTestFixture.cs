@@ -13,7 +13,7 @@ namespace Notes.Tests.Common
 
         public QueryTestFixture()
         {
-            Context = FloursContextFactory.Create();
+            Context = MoleculeContextFactory.Create();
             var configurationProvider = new MapperConfiguration(cfg =>
             {
                 cfg.AddProfile(new AssemblyMappingProfile(
@@ -24,7 +24,7 @@ namespace Notes.Tests.Common
 
         public void Dispose()
         {
-            FloursContextFactory.Destroy(Context);
+            MoleculeContextFactory.Destroy(Context);
         }
     }
 

@@ -2,9 +2,9 @@
 using Molecule.Application.Common.Mappings;
 using Molecule.Application.Flours.Commands.UpdateFlour;
 
-namespace Molecule.Backend.Models
+namespace WebApi.Models.Flour
 {
-    public class UpdateFlourDto: IMapWith<UpdateFlourCommand>
+    public class UpdateFlourDto : IMapWith<UpdateFlourCommand>
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
